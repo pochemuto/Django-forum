@@ -1,5 +1,8 @@
-<html>
-<body>
+{% extends "header.html" %}
+{% block title %}login{% endblock %}
+
+{% block content %}
+    <h1>Login</h1>
  {% if errors %}
  <p class="error">{{ errors }}</p>
   {% endif %}
@@ -12,6 +15,4 @@
 
     <input type="submit" value="login" />
   </form>
-  or <a href="/register">register</a>.
-</body>
-</html>
+{% endblock %}

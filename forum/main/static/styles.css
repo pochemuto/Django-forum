@@ -1,0 +1,23 @@
+body, html {
+    font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+nav {
+    background-color: aqua;
+    padding: 5px;
+}
+
+nav > ul {
+    margin: 0;
+}
+nav > ul > li {
+    display: inline;
+    list-style: none;
+    padding-right: 20px;
+}
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
