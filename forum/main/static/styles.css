@@ -8,6 +8,19 @@ nav {
     padding: 5px;
 }
 
+.right-toolbar {
+    float: right;
+}
+.username {
+    padding-right: 10px;
+    color: #008282;
+}
+form button {
+    display: block;
+}
+#content {
+    padding: 0 50px;
+}
 nav > ul {
     margin: 0;
 }

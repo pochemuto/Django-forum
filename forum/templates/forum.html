@@ -18,8 +18,12 @@
         </ul>
         {% endfor %}
 
-        <p>
-            This is a forum template.
-        </p>
+        {% if user.is_authenticated %}
+            <form method="post">
+            <div>Input message:</div>
+            <textarea name="message" rows="5" cols="60"></textarea>
+            <button type="submit">Post it!</button>
+            </form>
+        {% endif %}
 
 {% endblock %}

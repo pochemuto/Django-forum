@@ -10,7 +10,7 @@
     <ul>
         <li><a href="/forum">Messages</a></li>
         {% if user.is_authenticated %}
-        <li><a href="/logout">Logout</a></li>
+        <li><span class="right-toolbar"><span class="username">{{ user }}</span><a href="/logout">Logout</a></span></li>
         {% else %}
         <li><a href="/login">Login</a></li>
         <li><a href="/register">Register</a></li>

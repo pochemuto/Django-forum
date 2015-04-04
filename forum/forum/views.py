@@ -47,6 +47,10 @@ def logout(request):
     return HttpResponseRedirect("/forum")
 
 def forum(request):
+    if request.method == 'POST':
+        entity = Message(text = request.POST.get('message', ''))
+        entity.save()
+        return HttpResponseRedirect("/forum")
     messages = Message.objects.all()
     return render(request, 'forum.html', {'messages': messages})
 
@@ -55,4 +59,3 @@ def index(request):
         return HttpResponseRedirect("/forum")
     else:
         return HttpResponseRedirect("/login")
-    pass
