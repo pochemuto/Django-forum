@@ -47,7 +47,7 @@ def logout(request):
     return HttpResponseRedirect("/forum")
 
 def forum(request):
-    if request.method == 'POST':
+    if request.user.is_authenticated() and request.method == 'POST':
         entity = Message(text = request.POST.get('message', ''))
         entity.save()
         return HttpResponseRedirect("/forum")
